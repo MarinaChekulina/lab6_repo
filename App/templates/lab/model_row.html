@@ -1,0 +1,20 @@
+{% extends 'lab/base.html' %}
+
+{% block title %}Модельный ряд {% endblock %}
+
+{% block header %}Модельный ряд{% endblock %}
+
+{% block body %}
+    <style type="text/css">
+   div {
+    background:  powderblue;
+   }
+  </style>
+
+    <ul>
+    {% for car in model_row %}
+        {% include 'lab/model_row_item.html' %}
+
+    {% endfor %}
+    </ul>
+{% endblock %}
